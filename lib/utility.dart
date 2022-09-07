@@ -1,4 +1,3 @@
-import 'package:assignment/constants.dart';
 import 'package:flutter/material.dart';
 
 SizedBox underLine(BuildContext context) {
@@ -13,10 +12,15 @@ SizedBox underLine(BuildContext context) {
 
 class OverviewData extends StatelessWidget {
   OverviewData(
-      {Key? key, required this.leftText, required this.rightText, this.icon})
+      {Key? key,
+      required this.leftText,
+      required this.rightText,
+      required this.style,
+      this.icon})
       : super(key: key);
   final String leftText;
   final String rightText;
+  final TextStyle style;
   IconData? icon;
 
   @override
@@ -28,7 +32,7 @@ class OverviewData extends StatelessWidget {
         children: [
           Text(
             leftText,
-            style: kNormalTextStyle(),
+            style: style,
           ),
           Row(
             children: [
@@ -42,7 +46,7 @@ class OverviewData extends StatelessWidget {
               ),
               Text(
                 rightText,
-                style: kNormalTextStyle(),
+                style: style,
               ),
             ],
           ),

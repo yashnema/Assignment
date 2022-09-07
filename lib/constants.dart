@@ -14,3 +14,10 @@ TextStyle kNormalTextStyle() {
     fontSize: 15.0,
   );
 }
+
+TextStyle kStockTextStyle() {
+  return const TextStyle(
+    color: Colors.white,
+    fontSize: 15.0,
+  );
+}
